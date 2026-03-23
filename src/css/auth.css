@@ -1,0 +1,140 @@
+body{
+    
+    background-image: url('../img/register-bg.jpeg');
+    
+    background-size: cover; /* Để ảnh phủ kín màn hình */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Bắt buộc body cao ít nhất bằng màn hình */
+    margin: 0;
+
+}
+
+.auth-container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+   
+}
+
+.col-md-6{
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 100px;
+    box-shadow: 0 4px 6px rgba(17, 14, 14, 0.3);
+    width: 400px;
+}
+
+.logo-container{
+    
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 13px;
+    border-radius: 100px;
+    opacity: 0.9;
+    transition: 0.3s ease;   
+}
+
+.logo-container:hover{
+    opacity: 1;
+}
+
+h6{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.Form-group{
+    position: relative;
+
+}
+
+.input-wrapper{
+    position: relative;
+}
+
+.input-wrapper .icon{
+    position: absolute;
+    left: 10px;
+    margin-top: 10px;
+    color: var(--primary-color);
+    font-size: 18px;
+
+}
+
+
+.form-control{
+    background-color: #fbfcff;
+    border: solid 1px #d7d5eab6;
+    border-radius: 5px;
+    padding: 10px 20px 10px 40px;
+    color: var(--dark-color);
+}
+
+.form-control:focus{
+   box-shadow: #190f65b6;
+   border: none;
+   transition: 0.3s ease;
+}
+
+.form-control::placeholder{
+    color: #190f65b6;
+}
+
+.btn-auth{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+.login-link{
+    text-align: center;
+    margin-top: 15px;
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-link a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.login-link a:hover{
+    text-decoration: underline;
+    color: var(--light-dark-color); 
+}
+
+
+/*Responsive*/
+@media screen and (max-width: 768px) {
+    .col-md-6 {
+        width: 100%;
+        padding: 20px;
+    
+    }
+    h6{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Smart locker</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/client/src/img/blue-lock.svg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="./src/css/main.css">
+
+    <!--  css -->
+    <link rel="stylesheet" href="./src/css/campus-locker.css">
+
+</head>
+
+<body>
+    <div class="pape-wrappaper">
+        <!-- Banner -->
+        <div class="banner-group">
+            <header>
+                <div class="header-content d-flex align-items-center justify-content-between">
+                    <div class="logo"><img src="./src/img/blue-lock.svg" alt="logo"></div>
+                
+                
+                    <ul class="nav pe-5">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link text-dark">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="campus-locker.html" class="nav-link text-dark">
+                            <!--- <i class="fa-solid fa-box"></i>*/--->
+                                Campus lockers
+                                
+                            </a>
+                        </li>
+                        
+                        
+                        <div class="profile">
+                            <button type="button" class="dropdown-toggle btn btn-outline-dark" id="profile-dropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                                Tài khoản
+                            </button>
+
+                            <ul id="author-menu-drd" class="dropdown-menu shadow" aria-labelledby="profile-dropdown">
+    
+                                <li class="user-only px-3 py-2 border-bottom mb-1" style="display: none; background-color: #f8f9fa;">
+                                    <div class="fw-bold text-primary mb-1" id="displayUsername" style="font-size: 1.1rem;">Đang tải...</div>
+                                    <div class="fw-bold text-warning" style="font-size: 0.9rem;">
+                                        <i class="fa-solid fa-coins me-1"></i><span id="displayPoints">0</span> Point
+                                    </div>
+                                </li>
+
+                                <li class="guest-only">
+                                    <a class="dropdown-item" href="login.html">
+                                        <i class="fa-solid fa-arrow-right-to-bracket me-2"></i>Đăng nhập
+                                    </a>
+                                </li>
+                                <li class="guest-only">
+                                    <a class="dropdown-item" href="register.html">
+                                        <i class="fa-solid fa-user-plus me-2"></i>Đăng ký
+                                    </a>
+                                </li>
+
+                                <li class="user-only" style="display: none;">
+                                    <a class="dropdown-item text-danger mt-1" href="#" id="btnLogout">
+                                        <i class="fa-solid fa-right-from-bracket me-2"></i>Đăng xuất
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                
+                </ul>
+                
+                
+            </header>
+
+           
+        </div>
+
+        <!-- Introduce -->
+        <section class="container mt-5 mb-5">
+        <div class="row align-items-center">
+
+        </div>
+        </section>
+
+
+        <!-- Function -->
+        <section class="container mt-5">
+            <div class="row">
+                 <div class="col-12">
+                     <h2 class="fw-bold text-primary mb-4 text-start">Rent a locker</h2>
+            
+                 </div>
+            </div>
+
+            <div class="product-list row g-3 py-3 mb-4">
+
+              <!---  <div class="product-item col-6 col-md-4">
+                    <div class="text p-2">
+                        <button class="btn room-btn status-available w-100" type="button">
+                            <h5 class="mb-1 fw-bold">A101</h5>
+                            <div class="status-text">Available</div>
+                        </button>
+                    </div>
+                </div>   ---->
+
+                
+
+                
+
+            </div>
+            
+            <div class="order-overlay" id="orderOverlay">
+                <div class="order-form">
+                    <div class="order-card p-4 rounded shadow-lg">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="mb-0 fw-bold text-dark">Đặt Thuê Tủ</h4>
+                            <button type="button" class="btn-close btn-cancel" aria-label="Close"></button>
+                        </div>
+
+                        <div class="form-body">
+                            <div class="mb-4">
+                                <label for="lockerId" class="form-label small text-uppercase fw-bold text-muted">Locker ID</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-door-closed"></i></span>
+                                    <input type="text" class="form-control border-start-0 fw-bold text-primary" id="lockerId" value="" readonly>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="rentalDuration" class="form-label small text-uppercase fw-bold text-muted">Thời gian thuê</label>
+                                <select class="form-select border-2 custom-select" id="rentalDuration">
+                                    <option value="1">1 tiếng (Ngắn hạn)</option>
+                                    <option value="2">2 tiếng</option>
+                                    <option value="3">3 tiếng</option>
+                                    <option value="5">5 tiếng</option>
+                                    <option value="12">12 tiếng (Nửa ngày)</option>
+                                    <option value="24">24 tiếng (Cả ngày)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4 p-3 bg-light rounded border border-warning border-opacity-50 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-dark">Tổng chi phí:</span>
+                                <span class="fw-bold fs-5 text-warning" id="totalPoints"><i class="fa-solid fa-coins me-1"></i> 60 Point</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 py-2 fw-bold text-uppercase" style="border-radius: 10px;">Xác nhận đặt tủ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+        </section>
+        
+
+
+    </div>
+
+    <!--Bang thong bao ma pin--->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+                    <div class="modal-header border-0 bg-primary bg-gradient text-white d-flex flex-column align-items-center pt-5 pb-4 position-relative">
+                        <div class="bg-white rounded-circle d-flex align-items-center justify-content-center mb-3 shadow success-icon-wrapper">
+                            <i class="fa-solid fa-check text-primary success-icon-check"></i>
+                        </div>
+                        <h4 class="modal-title fw-bold text-uppercase success-modal-title" id="successModalLabel">Đặt tủ thành công!</h4>
+                    </div>
+                    
+                    <div class="modal-body text-center p-4">
+                        <p class="text-muted mb-4 fs-6">Cảm ơn bạn đã sử dụng dịch vụ. Đây là thông tin mở khóa của bạn:</p>
+                        
+                        <div class="pin-display-box p-4 mb-4 rounded-4">
+                            <p class="mb-2 text-uppercase fw-bold text-secondary pin-label">Mã PIN Mở Khóa</p>
+                            <h1 class="display-3 fw-bolder text-primary mb-0 pin-number" id="modalUnlockPin">000000</h1>
+                        </div>
+                        
+                        <div class="d-flex justify-content-center align-items-center mb-4">
+                            <span class="text-muted me-2 fw-medium">Số dư còn lại:</span>
+                            <span class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-pill shadow-sm">
+                                <i class="fa-solid fa-coins me-1"></i> <span id="modalRemainingPoints">0</span> Point
+                            </span>
+                        </div>
+
+                        <div class="alert alert-light border border-warning border-4 border-end-0 border-top-0 border-bottom-0 text-start mb-0 rounded-3 shadow-sm custom-warning-alert" role="alert">
+                            <i class="fa-solid fa-circle-exclamation text-warning me-2 fs-5 align-middle"></i>
+                            <span class="text-dark"><strong>Lưu ý:</strong> Hãy chụp màn hình hoặc ghi nhớ mã PIN này để mở tủ phần cứng!</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer justify-content-center border-0 pb-5 pt-0">
+                        <button type="button" class="btn btn-primary btn-lg px-5 rounded-pill fw-bold shadow btn-finish-order" id="btnConfirmSuccess">
+                            HOÀN TẤT
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </div> 
+
+    <section class="container mt-4" id="my-active-lockers-section" style="display: none;">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="fw-bold text-success mb-3 text-start">
+                        <i class="fa-solid fa-key me-2"></i>Active locker
+                    </h2>
+                </div>
+            </div>
+            
+            <div class="row g-3 py-2 mb-4" id="my-active-lockers-list">
+                </div>
+            
+            <hr class="my-4 border-secondary opacity-25">
+        </section>
+
+
+
+    <footer class="footer-section mt-5">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading mb-4">Smart Locker</h5>
+                    <p class="text-muted">
+                        Hệ thống quản lý đồ đạc giúp học sinh quản lí tốt hơn hành lý của.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61565214842798" class="me-2 text-decoration-none">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" width="32" height="32" alt="FB">
+                        </a>
+                        <a href="https://soundcloud.com/ngot" class="me-2 text-decoration-none">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Antu_soundcloud.svg" width="32" height="32" alt="Soundcloud">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 px-lg-5">
+                    <h5 class="footer-heading mb-4">Điều hướng</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="#">Campus Locker</a></li>
+                        <li class="mb-2"><a href="#">Lịch bảo trì</a></li>
+                        <li class="mb-2"><a href="https://forms.gle/TFU2yk6fLuaTNQG47">Báo cáo</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="footer-heading mb-4">Hỗ trợ kỹ thuật</h5>
+                    <p class="mb-2 text-muted"><i class="bi bi-geo-alt me-2 text-primary"></i> Tầng 1, Tòa nhà A, Khu Công nghệ</p>
+                    <p class="mb-2 text-muted"><i class="bi bi-telephone me-2 text-primary"></i> +84 123 456 789</p>
+                    <p class="mb-2 text-muted"><i class="bi bi-envelope me-2 text-primary"></i> support@system.com</p>
+                </div>
+            </div>
+
+            <hr class="my-4 border-secondary opacity-25">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="text-muted small">&copy; 2026 </span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <img src="https://img.icons8.com/color/48/000000/google-logo.png" width="20" class="me-2 opacity-75">
+                    <img src="https://img.icons8.com/color/48/000000/microsoft.png" width="20" class="opacity-75">
+                </div>
+            </div>
+        </div>
+    </footer>    
+        
+
+    <!---campus JS-->
+    <script type="module" src="./src/js/campus.js"></script>
+
+    
+    <!-- Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

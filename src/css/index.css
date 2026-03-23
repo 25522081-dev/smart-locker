@@ -1,0 +1,317 @@
+.banner-group {
+   
+    height: 70vh; /* Giữ nguyên chiều cao của banner group */
+    background-image: url('../img/banner\ locker.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* Sử dụng Flexbox cho .banner-group */
+    display: flex;
+    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+    align-items: center;    /* Căn giữa các phần tử theo chiều dọc */
+    position: relative; /* Để có thể định vị tuyệt đối cho .banner-text */
+    
+}
+
+.logo img {
+    
+    max-width: 65px; /* Giảm kích thước logo */
+    height: auto; /* Giữ nguyên tỷ lệ khung hình của logo */
+    padding: 15px; /* Thêm khoảng cách xung quanh logo */
+}
+
+header{
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+.header-content {
+    /* ... các thuộc tính khác của .header-content ... */
+}
+
+.nav-item a:hover{
+    color: var(--primary-color) !important;
+}
+
+.profile-dropdown{
+    background-color: var(--light-color);
+    border: none;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.btn-explore {
+    background-image: linear-gradient(
+        to right,
+        var(--primary-color),
+        rgba(105, 58, 155, 0.8)
+    );
+    box-shadow: 0 4px 6px rgba(95, 15, 124, 0.3);
+    margin-top: 30px;
+    margin-bottom: 30px;
+   
+   
+    
+    
+}
+
+.btn-explore:hover {
+    background-image: linear-gradient(
+        to right,
+        var(--primary-color),
+        rgba(105, 58, 155, 1)
+    );
+    box-shadow: 0 6px 8px rgba(95, 15, 124, 0.9);
+}
+
+
+
+/* Vòng tròn số bước Hướng dẫn */
+.step-circle {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+.d-flex:hover .step-circle {
+    transform: scale(1.1); /* Phóng to nhẹ vòng tròn khi trỏ chuột vào khu vực đó */
+}
+
+
+
+
+/* Hiệu ứng hover cho thẻ Lợi ích */
+#explore-section .border {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#explore-section .border:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Đảm bảo icon đổi màu theo tông của bạn, nếu bạn dùng biến --primary-color */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+
+/* Locker items */
+.product-list .product-item{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+/* Layout chung cho button */
+.room-btn {
+    border-radius: 8px;
+    padding: 15px 5px;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.room-btn h5 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.status-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Hiệu ứng hover cho tất cả các item */
+.product-item:hover {
+    transform: translateY(-3px);
+}
+
+/* Định nghĩa màu sắc theo trạng thái */
+
+/* 1. Available - Xanh lá */
+.status-available {
+    background-color: #e8f9f1;
+    border-color: #34d399;
+    color: #065f46;
+}
+.status-available:hover {
+    background-color: #d1fae5;
+}
+
+/* 2. Occupied - Hồng/Đỏ */
+.status-occupied {
+    background-color: #fff1f2;
+    border-color: #fecaca;
+    color: #991b1b;
+}
+
+/* 3. Offline - Xám */
+.status-offline {
+    background-color: #f8fafc;
+    border-color: #e2e8f0;
+    color: #64748b;
+}
+
+/* 4. Maintenance - Cam */
+.status-maintenance {
+    background-color: #fff7ed;
+    border-color: #fed7aa;
+    color: #9a3412;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #f8fafc; /* Màu nền xám cực nhạt để tách biệt với body trắng */
+    border-top: 1px solid #e2e8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    position: relative;
+}
+
+/* Gạch chân dưới tiêu đề cột */
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 30px;
+    height: 3px;
+    background-color: #3b82f6; /* Màu xanh Primary */
+    border-radius: 2px;
+}
+
+.footer-links a {
+    color: #64748b;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #3b82f6;
+    padding-left: 5px; /* Hiệu ứng đẩy nhẹ khi hover */
+}
+
+.social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #e2e8f0;
+    color: #475569;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #3b82f6;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+
+
+
+
+/* Order form */
+/* Lớp mờ bao phủ toàn màn hình */
+.order-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px); /* Hiệu ứng mờ nền */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    
+    /* Ẩn mặc định với hiệu ứng fade */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Class để hiển thị popup */
+.order-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Thẻ Card bên trong có hiệu ứng trượt nhẹ lên */
+.order-overlay .order-form {
+    width: 100%;
+    max-width: 420px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.order-overlay.active .order-form {
+    transform: translateY(0);
+}
+
+.order-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 16px !important;
+}
+
+.form-control[readonly] {
+    background-color: #f8fafc;
+}
+
+/*Đăng kí thành công modal*/
+/* Header Icon */
+.success-icon-wrapper {
+    width: 80px; 
+    height: 80px;
+}
+.success-icon-check {
+    font-size: 2.5rem;
+}
+.success-modal-title {
+    letter-spacing: 1px;
+}
+
+/* Khung chứa mã PIN */
+.pin-display-box {
+    background-color: #f4f8ff; 
+    border: 2px dashed #0d6efd;
+}
+.pin-label {
+    letter-spacing: 1px; 
+    font-size: 0.85rem;
+}
+.pin-number {
+    letter-spacing: 10px; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Khung lưu ý (Warning alert) */
+.custom-warning-alert {
+    border-left-color: #ffc107 !important; 
+    background-color: #fffaf0;
+}
+
+/* Nút bấm Hoàn tất */
+.btn-finish-order {
+    transition: all 0.3s ease;
+}
+.btn-finish-order:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(13, 110, 253, 0.25) !important;
+}

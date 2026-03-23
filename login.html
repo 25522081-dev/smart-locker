@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Smart locker</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/client/src/img/blue-lock.svg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Auth css -->
+    <link rel="stylesheet" href="./src/css/auth.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="./src/css/main.css">
+
+</head>
+
+<body>
+   
+    <div class="container mt-5">
+        <div class="row justify-content-center auth-container">
+            <div class="col-md-6 shadow-md p-4 rounded-md">
+                <a href="index.html" class="logo-container btn-primary">
+                    <i class="fa-solid fa-house"></i>
+                    
+                </a>
+                <h6>Sign in</h6>
+                <form id="loginForm">
+                    <div class="Form-group mb-3">
+                        <div class="input-wrapper mb-3">
+                            <span class="icon"><i class="fa-solid fa-envelope" ></i></span>
+                            <input type="text" class="form-control inp-email"  
+                            placeholder="Email" aria-describedby="basic-addon1" id="email">
+                        </div>
+
+                        <div class="input-wrapper mb-3">
+                        
+                            <span class="icon"><i class="fa-solid fa-key"></i></span>
+                            <input type="password" class="form-control inp-pwd"  
+                            placeholder="Mật khẩu" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="password">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-auth" >Đăng nhập</button>
+                    <p class="login-link mt-3 text-center">Bạn chưa có tài khoản? <a href="register.html">Đăng ký</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <!-- Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- login JS -->
+    <script type="module" src="./src/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+:root
+{
+    --primary-color: rgb(36, 110, 206);
+
+    --secondary-color: #5687bc;
+    --success-color: #5fa1f3;
+    --danger-color: #cf3767;
+    --warning-color: #e6ff07;
+    --info-color: #092226;
+    --light-color: #ffffff;
+    --light-dark-color: #333a83;
+    --dark-color: #13404b;
+
+}
+/* --------------------------------------- */
+
+html {
+    scroll-behavior: smooth; /* Tạo hiệu ứng cuộn mượt mà khi click nút Khám phá */
+}
+
+
+
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    border: none;
+}
+
+.btn-danger {
+    background-color: var(--light-color);
+    color: var(--danger-color)
+}
+
+.btn-cancel {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+.rounded-sm {
+    border-radius: 4px;
+}
+
+.rounded-md {
+    border-radius: 8px;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+}
+
+
+
+
+/* Hiệu ứng di chuột cho các thẻ Lợi ích */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    border-color: var(--primary-color) !important;
+}
