@@ -13,7 +13,33 @@ document.addEventListener("DOMContentLoaded", async function() {
     await getMyActiveLockers();
     await getCampusProductList();
 
-    // 3. Xử lý logic Form Order Overlay
+    // =====================================================================
+    // BƯỚC MỚI: CHỈ HIỂN THỊ MÃ PIN KHI ĐƯỢC CHUYỂN HƯỚNG TỪ NEXT.JS
+    // =====================================================================
+    const urlParams = new URLSearchParams(window.location.search);
+    const action = urlParams.get('action');
+    const lockerId = urlParams.get('lockerId');
+    const pin = urlParams.get('pin'); // Next.js đã cấp sẵn PIN và ném qua đây
+
+    if (action === "show_pin" && lockerId && pin) {
+        // Chỉ việc hiển thị thông tin lên UI Modal có sẵn
+        document.getElementById("modalUnlockPin").innerText = pin;
+        
+        // Cập nhật câu thông báo để user biết tủ nào
+        const label = document.getElementById("successModalLabel");
+        if (label) label.innerText = `Đã cất đồ vào tủ ${lockerId}`;
+        
+        // Bật modal lên
+        const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+        successModal.show();
+
+        // Xóa các param trên URL để F5 không bị hiện lại bảng này
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+    // =====================================================================
+
+
+    // 3. Xử lý logic Form Order Overlay (Giữ nguyên code cũ của ông)
     const overlay = document.getElementById("orderOverlay");
     const lockerIdInput = document.getElementById("lockerId");
     const productListContainer = document.querySelector('.product-list');
