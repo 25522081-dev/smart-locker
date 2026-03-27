@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         
         // Cập nhật câu thông báo để user biết tủ nào
         const label = document.getElementById("successModalLabel");
-        if (label) label.innerText = `Đã cất đồ vào tủ ${lockerId}`;
+        if (label) label.innerText = `Đã tạo chỗ để ở tủ ${lockerId}`;
         
         // Bật modal lên
         const successModal = new bootstrap.Modal(document.getElementById('successModal'));
@@ -100,3 +100,4 @@ document.addEventListener("DOMContentLoaded", async function() {
         });
     }
 });
+
